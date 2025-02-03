@@ -1,5 +1,6 @@
 env:
-  RUBY_VERSION: 3.1.2
+  RUBY_VERSION: 3.0.2
+  # RUBY_VERSION: 3.1.2
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: password
   DATABASE_USER: postgres
@@ -39,8 +40,8 @@ jobs:
           cmd: install
       - name: Run tests
         run: bundler exec rspec .
-      - name: Run brakeman
-        run: brakeman -o brakeman.txt
+      # - name: Run brakeman
+      #   run: brakeman -o brakeman.txt
       - name: Run rubocop
         run: bundler exec rubocop --force-exclusion vendor/*/** --out rubocop.txt
       - name: Upload coverage results

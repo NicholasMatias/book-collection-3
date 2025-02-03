@@ -1,0 +1,38 @@
+
+== Brakeman Report ==
+
+Application Path: /finalBook/test_app
+Rails Version: 6.1.7.10
+Brakeman Version: 6.2.2
+Scan Date: 2025-02-03 20:35:35 +0000
+Duration: 503.390916088 seconds
+Checks Run: BasicAuth, BasicAuthTimingAttack, CSRFTokenForgeryCVE, ContentTag, CookieSerialization, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EOLRails, EOLRuby, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONEntityEscape, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, PageCachingCVE, Pathname, PermitAttributes, QuoteTableName, Ransack, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeConfigCve, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, SprocketsPathTraversal, StripTags, SymbolDoSCVE, TemplateInjection, TranslateBug, UnsafeReflection, UnsafeReflectionMethods, ValidationRegex, VerbConfusion, WeakRSAKey, WithoutProtection, XMLDoS, YAMLParsing
+
+== Overview ==
+
+Controllers: 2
+Models: 2
+Templates: 8
+Errors: 0
+Security Warnings: 2
+
+== Warning Types ==
+
+Unmaintained Dependency: 2
+
+== Warnings ==
+
+Confidence: High
+Category: Unmaintained Dependency
+Check: EOLRuby
+Message: Support for Ruby 3.0.2 ended on 2024-03-31
+File: .ruby-version
+Line: 1
+
+Confidence: High
+Category: Unmaintained Dependency
+Check: EOLRails
+Message: Support for Rails 6.1.7.10 ended on 2024-10-01
+File: Gemfile.lock
+Line: 144
+
