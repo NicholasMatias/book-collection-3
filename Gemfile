@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.2'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'rails-ujs'
@@ -30,9 +31,13 @@ gem 'concurrent-ruby','1.3.4'
 gem 'bootsnap', '>= 1.4.4', require: false
 # Add gem to manage db
 gem 'yaml_db'
+
+gem 'rexml'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -44,8 +49,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'robocop', require: false
-  gem 'rubocop-rails', require: false
+  # gem 'robocop', require: false
+  # gem 'rubocop-rails', require: false
 end
 
 group :test do
@@ -57,7 +62,13 @@ group :test do
   gem 'simplecov', :require => false
 end
 
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "rspec-rails", "~> 6.1", :groups => [:development, :test]
+gem 'brakeman'
+
+gem 'rubocop'
+
+# gem "rspec-rails", "~> 6.1", :groups => [:development, :test]
