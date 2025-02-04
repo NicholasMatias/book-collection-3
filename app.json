@@ -1,6 +1,6 @@
 {
 
-    "stack": "heroku-24",
+    "stack": "heroku-22",
     
     "addons": [
     
